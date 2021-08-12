@@ -1,8 +1,7 @@
 # Race Control System User Manual
 
 ## Purpose:
-The Race Control System provides a platform to logically control multiple autonomous vehicles in a race competition format. The RCS allows Admins to remotely start a race and notify vehicles to stop when the race is finished. The RCS follows the EVGP Autonomous Safety and Control
-System Proposal provided in this repository.
+The Race Control System provides a platform to logically control multiple autonomous vehicles in a race competition format. The RCS allows Admins to remotely start a race and notify vehicles to stop when the race is finished. The RCS follows the EVGP Autonomous Safety and Control System Proposal provided in this repository in `specs`.
 
 ### Warning:
 The Race Control System (RCS) software is provided without warranty.
@@ -21,7 +20,8 @@ To run the Race Control System:
 
 ### Info
 The RCS TCP server starts on your local machine IP at port 12017. Racers will use that IP and port to connect to as a TCP connection.  
-Commands are sent with as a string of characters ``$RACE_STATE;`` and expect that format in responses. See the EVGP Autonomous Safety and Control System Proposal for more details on how the RCS communicates and any other information this user manual does not provide.
+Commands are sent with as a string of characters ``$RACE_STATE;`` and expect that format in responses. See the EVGP Autonomous Safety and Control System Proposal for more details on how the RCS communicates and any other information this user manual does not provide. Additionally, 
+see [this video](https://youtu.be/0dQWle8g_jk) for a demonstration.
 
 ### Start Up GUI
 1. Connect to a LAN
@@ -29,7 +29,7 @@ Commands are sent with as a string of characters ``$RACE_STATE;`` and expect tha
 1. Assign Teams a static IP on the LAN
 1. Fill in racers_list.yaml with Team names and IP
 	- List racers as ``STATIC_IP: TEAM_NAME``
-	- Example: ``123.123.123: RoboJackets``
+	- Example: ``123.123.123.123: RoboJackets``
 1. Start the RCS gui with ``poetry run python evgp_rcs/gui.py``
 
 ### To Start a Race:

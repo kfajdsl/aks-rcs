@@ -1,6 +1,6 @@
 # EVGP Race Control System (RCS)
 
-Created for the [EVGrandPrix (EVGP) Autonomous Kart Racing Competition](https://evgrandprix.org/autonomous/).
+Created for the [evGrand Prix (EVGP) Autonomous Kart Racing Competition](https://evgrandprix.org/autonomous/).
 Karts can connect to the RCS through a simple TCP socket.
 The GUI allows management of a race by signaling the race start sequence, race ending, and E-Stops. It is up to teams to handle and respect race signals and act safely during manual and autonomous control.
 
@@ -9,7 +9,7 @@ The Race Control System (RCS) software is provided without warranty.
 The RCS is not and should not be used as an emergency safety system.
 Administration and Teams are expected to have safety measures in place and maintain safe control of vehicles.
 
-See EVGP Autonomous Safety and Control System Proposal for more documentation and the *RCS User Manual* for more information on the RCS GUI usage.
+See the EVGP Autonomous Safety and Control System Proposal in `specs` for more documentation and the *RCS User Manual* for more information on the RCS GUI usage.
 
 
 
@@ -26,10 +26,12 @@ PyQt 5 is used for the GUI framework.
 1. ``poetry install``
 1. Place a ``racer_list.yaml`` in repo top level folder
     - List racers as ``STATIC_IP: TEAM_NAME``
-    - Example: ``123.123.123: RoboJackets``
+    - Example: ``123.123.123.123: RoboJackets``
 1. ``poetry run python evgp_rcs/gui.py``
 1. In the GUI, select racers and press move to active race
 1. Run race following the guide in the *RCS User Manual*
+
+A video demonstration of using the tool is provided [here](https://youtu.be/0dQWle8g_jk).
 
 
 ``tcpclient.py`` provides an example TCP client that can be adapted for a Race vehicle.
